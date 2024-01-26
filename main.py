@@ -31,7 +31,7 @@ def signin():
 
     else:
         try:
-            mydb=mysql.connector.connect(host='localhost',user='root',password='N9GmGc0T6NK9PlQ',
+            mydb=mysql.connector.connect(host='localhost',user='root',password='Your password',
                                          database="studentregistration")
             mycursor=mydb.cursor()
             print("Connected to Database!!")
@@ -82,7 +82,7 @@ def signup_command():
 
         else:
             try:
-                mydb = mysql.connector.connect(host='localhost', user='root', password='N9GmGc0T6NK9PlQ')
+                mydb = mysql.connector.connect(host='localhost', user='root', password='Your password')
                 mycursor = mydb.cursor()
                 print("Connection Stablished!!")
 
@@ -102,7 +102,7 @@ def signup_command():
 
             except:
                 mycursor.execute("use StudentRegistration")
-                mydb = mysql.connector.connect(host='localhost', user='root', password='N9GmGc0T6NK9PlQ',
+                mydb = mysql.connector.connect(host='localhost', user='root', password='Your password',
                                                 database="StudentRegistration")
                 mycursor = mydb.cursor()
 
