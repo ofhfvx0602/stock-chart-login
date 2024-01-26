@@ -117,7 +117,7 @@ def signup_command():
     def sign():
         window.destroy()
 
-    img = PhotoImage(file='signup.png')
+    img = PhotoImage(file='2man.png')
     Label(window,image=img,border=0,bg='white').place(x=50,y=20)
 
     frame=Frame(window,width=350,height=390,bg="#fff")
@@ -188,7 +188,7 @@ def signup_command():
 
 #######################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-img = PhotoImage(file='login.png')
+img = PhotoImage(file='2man.png')
 Label(root,image=img,bg='white').place(x=50,y=20)
 
 frame=Frame(root,width=350,height=350,bg="white")
