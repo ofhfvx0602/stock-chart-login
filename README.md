@@ -7,6 +7,6 @@ You can actually type in the name of the company and the stock price will be dis
 A three-month chart will be displayed.<br>
 The API uses Alpha Vantage.<br>
 It works in the local environment.<br>
-MYSQL should create its database and store the sign-up information in it.<br>
+MySQL should create its database and store the sign-up information in it.<br>
 
 # stock-chart-login
