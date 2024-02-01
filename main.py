@@ -31,7 +31,7 @@ def signin():
 
     else:
         try:
-            mydb=mysql.connector.connect(host='localhost',user='root',password='Your password',
+            mydb=mysql.connector.connect(host='localhost',user='root',password='your password',
                                          database="studentregistration")
             mycursor=mydb.cursor()
             print("Connected to Database!!")
@@ -51,9 +51,7 @@ def signin():
         if myresult==None:
 
             messagebox.showinfo("invalid","Invalid userid and password!!")
-
             #but user can try many times and crack password, so lets make that user can try only upto 3 times
-
             trial()
 
         else:
@@ -61,8 +59,6 @@ def signin():
             root.destroy()
             subprocess.run(['python', 'stock.py'])
 
-
-###########################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 def signup_command():
     window=Toplevel(root)
 
@@ -82,7 +78,7 @@ def signup_command():
 
         else:
             try:
-                mydb = mysql.connector.connect(host='localhost', user='root', password='Your password')
+                mydb = mysql.connector.connect(host='localhost', user='root', password='your password')
                 mycursor = mydb.cursor()
                 print("Connection Stablished!!")
 
@@ -102,7 +98,7 @@ def signup_command():
 
             except:
                 mycursor.execute("use StudentRegistration")
-                mydb = mysql.connector.connect(host='localhost', user='root', password='Your password',
+                mydb = mysql.connector.connect(host='localhost', user='root', password='your password',
                                                 database="StudentRegistration")
                 mycursor = mydb.cursor()
 
@@ -112,7 +108,6 @@ def signup_command():
                 mydb.commit()
                 mydb.close()
                 messagebox.showinfo("Register", "New User added Sucessfully!!!!")
-
 
     def sign():
         window.destroy()
@@ -126,7 +121,6 @@ def signup_command():
     heading=Label(frame,text='Sign up',fg='#57a1f8',bg='white',font=('Microsoft Yahei UI Light',23,'bold'))
     heading.place(x=100,y=5)
 
-##########################
     def on_enter(e):
         user.delete(0, 'end')
 
@@ -142,7 +136,6 @@ def signup_command():
 
     Frame(frame,width=295,height=2,bg='black').place(x=25,y=107)
 
-##########################
     def on_enter(e):
         code.delete(0, 'end')
 
@@ -158,8 +151,6 @@ def signup_command():
 
     Frame(frame,width=295,height=2,bg='black').place(x=25,y=177)
 
-##########################
-
     def on_enter(e):
         conform_code.delete(0, 'end')
 
@@ -174,7 +165,6 @@ def signup_command():
     conform_code.bind('<FocusOut>', on_leave)
 
     Frame(frame,width=295,height=2,bg='black').place(x=25,y=247)
-##########################
 
     Button(frame,width=39,pady=7,text='Sign up',bg='#57a1f8',fg='white',border=0,command=signup).place(x=35,y=280)
     label=Label(frame,text="I have an account",fg='black',bg='white',font=('Microsoft Yahei UI Light',9))
@@ -186,8 +176,6 @@ def signup_command():
 
     window.mainloop()
 
-#######################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 img = PhotoImage(file='2man.png')
 Label(root,image=img,bg='white').place(x=50,y=20)
 
@@ -197,7 +185,6 @@ frame.place(x=480,y=70)
 heading=Label(frame,text='Sign in',fg='#57a1f8',bg='white',font=('Microsoft Yahei UI Light',23,'bold'))
 heading.place(x=100,y=5)
 
-##########################
 def on_enter(e):
     user.delete(0, 'end')
 
@@ -214,7 +201,6 @@ user.bind('<FocusOut>', on_leave)
 
 Frame(frame,width=295,height=2,bg='black').place(x=25,y=107)
 
-##########################
 def on_enter(e):
     code.delete(0, 'end')
 
@@ -230,11 +216,6 @@ code.bind('<FocusIn>', on_enter)
 code.bind('<FocusOut>', on_leave)
 
 Frame(frame,width=295,height=2,bg='black').place(x=25,y=177)
-
-##########################
-
-
-
 
 Button(frame,width=39,pady=7,text='Sign in',bg='#57a1f8',fg='white',border=0,command=signin).place(x=35,y=204)
 label=Label(frame,text="Don't have an account?",fg='black',bg='white',font=('Microsoft Yahei UI Light',9))

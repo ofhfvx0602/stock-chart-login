@@ -37,8 +37,7 @@ class Application(tkinter.Frame):
     def display_graph(self):
         symbol = self.text_box.get()
         api_key = os.environ['ALPHA_VANTAGE_KEY']
-        url = 'https://www.alphavantage.co/query?' \
-              f'function=TIME_SERIES_DAILY&symbol={symbol}&interval=5min&apikey={api_key}'
+        url = 'your url'
         data = requests.get(url).json()
 
         daily_data = dict(reversed(data['Time Series (Daily)'].items()))
